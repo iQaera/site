@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iQaera Ambient Cinema</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg: #121212;
+            --text-main: #f5f5f5;
+            --text-muted: #8a8a8a;
+            --border-color: #262626;
+            --accent: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            max-width: 1200px;
+            margin: 0 auto 2rem auto;
+            padding: 0 1rem;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+
+        /* Informational Matrix Columns */
+        .info-matrix {
+            max-width: 1200px;
+            margin: 0 auto 4rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            padding: 0 1rem;
+        }
+
+        .matrix-column {
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.25rem;
+        }
+
+        .matrix-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        .matrix-column p {
+            font-size: 0.9rem;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
+        }
+
+        .matrix-column p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Portfolio Presentation Grid */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            padding: 0 1rem;
+        }
+
+        .portfolio-block {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .media-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+        }
+
+        .media-container img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .media-container:focus-within img,
+        .media-container:hover img {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .meta-panel {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .meta-title {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.01em;
+        }
+
+        .meta-desc {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer {
+            max-width: 1200px;
+            margin: 6rem auto 2rem auto;
+            padding: 0 1rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>iQaera Portfolio</h1>
+    </header>
+
+    <section class="info-matrix">
+        <div class="matrix-column">
+            <h2 class="matrix-label">01 / ENVIRONMENTAL WELLNESS MEDIA</h2>
+            <p>Environmental Wellness Media transforms digital screens into calming natural environments.<P>
+Each piece is a slow-moving geological, aquatic, or atmospheric environment designed specifically for relaxation spaces.<P>
+These are not videos or stock visuals.<P>
+They are ambient environments created to support calm, focus, and recovery in wellness settings. </p><p>Each environment is designed around natural processes:
+• Flowing water
+• Geological formation
+• Erosion and time
+• Geothermal movement
+• Mineral growth
+• Atmospheric drift and natural environment explorations
+
+            <p>
+        </div>
+        
+        <div class="matrix-column">
+            <h2 class="matrix-label">02 / Target Audiences</h2>
+            <p>We help wellness businesses make their spaces feel calmer, more restorative, and more memorable.<P> Our visual environments are designed as Environmental Wellness Media- the professional upgrade to legacy "ambient video," "motion graphics," and "nature loops"<p>• Spa reception areas
+• Treatment rooms
+• Relaxation lounges
+• Wellness centers
+• Boutique hotels
+• Recovery and rehabilitation spaces<p>Created to transform digital displays into restorative natural spaces.
+        </div>
+        
+        <div class="matrix-column">
+            <h2 class="matrix-label">03 / Technical Matrix</h2>
+            <p>All files are optimized for stability across professional  displays. Proprietary rendering and encoding provides: <P>
+ Measurable decrease in frame-to-frame pixel shimmer and border drift.
+Suppression of macro-blocking and compression artifact collapse under standardized high-bitrate H.264/H.265 distribution encodes.
+<P>
+Suppression of Interpolation Artifacts: Verifiable stabilization of frame-cadence transitions on 4K display outputs, eliminating hardware-induced motion smoothing.
+<P>
+Acoustic Phase Alignment: Documented restoration of low-frequency sub-harmonic transients, verified via real-time phase-correlation metering.</p>
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <section class="portfolio-block">
+            <div class="media-container" tabIndex="0">
+                
+                <video controls playsinline preload="metadata">
+                    <source src="assets/bubblejewels.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="meta-panel">
+                <h3 class="meta-title">Collection I: Latent Space</h3>
+                <p class="meta-desc">MPEG-4 Native Bitstream / 4K / 60fps / Local Rendered Geometry / 48Hz sub-harmonic and Hysteresis-Biased Saturation Audio Mastering / Panavision Texture and Colour</p>
+            </div>
+        </section>
+
+        <section class="portfolio-block">
+            <div class="media-container" tabIndex="0">
+                
+                <video controls playsinline preload="metadata">
+                    <source src="assets/BrokenHeartFluorite.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="meta-panel">
+                <h3 class="meta-title">Collection I: Vector Fields</h3>
+                <p class="meta-desc">MPEG-4 Native Bitstream / 4K / 60fps / Local Rendered Geometry / 48Hz sub-harmonic and Hysteresis-Biased Saturation Audio Mastering / Panavision Texture and Colour</p>
+            </div>
+        </section>
+
+        <section class="portfolio-block">
+            <div class="media-container" tabIndex="0">
+                
+                <video controls playsinline preload="metadata">
+                    <source src="assets/CirclingTheWand.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="meta-panel">
+                <h3 class="meta-title">Collection III: Chromatic Drift</h3>
+                <p class="meta-desc">MPEG-4 Native Bitstream / 4K / 60fps / Local Rendered Geometry / 48Hz sub-harmonic and Hysteresis-Biased Saturation Audio Mastering / Panavision Texture and Colour</p>
+            </div>
+        </section>
+
+        <section class="portfolio-block">
+            <div class="media-container" tabIndex="0">
+                
+                <video controls playsinline preload="metadata">
+                    <source src="assets/PinkForest2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="meta-panel">
+                <h3 class="meta-title">Collection IV: Monolithic Form</h3>
+                <p class="meta-desc">MPEG-4 Native Bitstream / 4K / 60fps / Local Rendered Geometry / 48Hz sub-harmonic and Hysteresis-Biased Saturation Audio Mastering / Panavision Texture and Colour</p>
+            </div>
+        </section>
+
+        <section class="portfolio-block">
+            <div class="media-container" tabIndex="0">
+                
+                <video controls playsinline preload="metadata">
+                    <source src="assets/purplewater.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="meta-panel">
+                <h3 class="meta-title">Collection V: Topological Trace</h3>
+                <p class="meta-desc">MPEG-4 Native Bitstream / 4K / 60fps / Local Rendered Geometry / 48Hz sub-harmonic and Hysteresis-Biased Saturation Audio Mastering / Panavision Texture and Colour</p>
+            </div>
+        </section>
+
+<section class="portfolio-block">
+            <div class="media-container" tabIndex="0">
+                <video controls playsinline preload="metadata">
+                    <source src="assets/closeup.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="meta-panel">
+                <h3 class="meta-title">Collection V: Topological Trace</h3>
+                <p class="meta-desc">MPEG-4 Native Bitstream / 4K / 60fps / Local Rendered Geometry / 48Hz sub-harmonic and Hysteresis-Biased Saturation Audio Mastering / Panavision Texture and Colour</p>
+            </div>
+        </section>
+
+<section class="portfolio-block">
+            <div class="media-container" tabIndex="0">
+                
+                <video controls playsinline preload="metadata">
+                    <source src="assets/orangeorbs.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="meta-panel">
+                <h3 class="meta-title">Collection IV: Monolithic Form</h3>
+                <p class="meta-desc">MPEG-4 Native Bitstream / 4K / 60fps / Local Rendered Geometry / 48Hz sub-harmonic and Hysteresis-Biased Saturation Audio Mastering / Panavision Texture and Colour</p>
+            </div>
+        </section>
+
+        <section class="portfolio-block">
+            <div class="media-container" tabIndex="0">
+                
+                <video controls playsinline preload="metadata">
+                    <source src="assets/heartwater2_MASTER_GOLD.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="meta-panel">
+                <h3 class="meta-title">Collection VI: Aquatic Narratives</h3>
+                <p class="meta-desc">MPEG-4 Native Bitstream / 4K / 60fps / Local Rendered Geometry / 48Hz sub-harmonic and Hysteresis-Biased Saturation Audio Mastering / Panavision Texture and Colour</p>
+            </div>
+        </section>
+
+<section class="portfolio-block">
+            <div class="media-container" tabIndex="0">
+                <video controls playsinline preload="metadata">
+                    <source src="assets/PanaTimeline D1_MASTER_GOLD.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="meta-panel">
+                <h3 class="meta-title">Amcient Cinema Trailer Summer 2026</h3>
+                <p class="meta-desc">MPEG-4 Native Bitstream / 4K / 60fps / Local Rendered Geometry / 48Hz sub-harmonic and Hysteresis-Biased Saturation Audio Mastering / Panavision Texture and Colour</p>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 All Rights Reserved. Hosted via GitHub Static Node.</p>
+    </footer>
+
+</body>
+</html>
